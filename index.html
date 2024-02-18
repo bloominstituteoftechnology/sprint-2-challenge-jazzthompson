@@ -34,22 +34,22 @@
 }
     
     // 👉 CHALLENGE 3
-    function booleanize(obj) {
-      const newObj = { ...obj };
-      for (let prop in newObj) {  
-      if (prop.length > 9) {
-      return "shorten all prop names to 9 chars or less";
-    }
-     if (newObj[prop] === 0) {
-      newObj[prop] = false;
-    } else if (newObj[prop] === 1) {
-      newObj[prop] = true;
-    } else if (newObj[prop] === null) {
-      delete newObj[prop];
-    }
+      function booleanize(obj) {
+        const newObj = { ...obj };
+        for (let prop in newObj) {  
+        if (prop.length > 9) {
+        return "shorten all prop names to 9 chars or less";
+      }
+      if (newObj[prop] === 0) {
+        newObj[prop] = false;
+      } else if (newObj[prop] === 1) {
+        newObj[prop] = true;
+      } else if (newObj[prop] === null) {
+        delete newObj[prop];
+      }
+    }   
+    return newObj;
   }   
-  return newObj;
-}   
 
 
       
